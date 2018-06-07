@@ -1,4 +1,12 @@
-export ZSH=/Users/tacf/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+
+is_linux () {
+  [[ $('uname') == 'Linux' ]];
+}
+
+is_osx () {
+  [[ $('uname') == 'Darwin' ]]
+}
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
@@ -7,6 +15,11 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs batter
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
+
+if is_osx; then
+  bindkey "[D" backward-word # Alt + Arrow Left
+  bindkey "[C" forward-word # Alt + Arrow Right
+fi
 
 # User configuration
 
@@ -28,8 +41,7 @@ fi
 # gpg
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-#gpgconf --launch gpg-agent
-/usr/local/bin/gpgconf --launch gpg-agent
+gpgconf --launch gpg-agent
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
