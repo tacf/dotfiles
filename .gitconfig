@@ -12,6 +12,7 @@
   whitespace = blank-at-eol,blank-at-eof,space-before-tab,tab-in-indent
   # Use the best pager available
   pager = (which diff-so-fancy >/dev/null 2>&1 && diff-so-fancy || which brew >/dev/null 2>&1 && $(brew --prefix git)/share/git-core/contrib/diff-highlight/diff-highlight || cat)|less
+	editor = code --wait
 
 [push]
   default = simple
@@ -51,3 +52,8 @@
   path = .gitconfig.local
 [credential]
   helper = "cache --timeout 86400"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
