@@ -1,0 +1,34 @@
+# up-to-date unix
+brew "bash"
+brew "bash-completion"
+brew "coreutils"
+brew "git"
+brew "openssl"
+brew "ssh-copy-id"
+brew "tree"
+brew "vim"
+brew "gnupg"
+
+# dev
+brew "go"
+brew "jq"
+brew "vagrant-completion"
+cask "docker"
+cask "iterm2"
+cask "vagrant"
+cask "virtualbox"
+
+# git prompt
+brew "git-radar"
+
+# misc
+brew "unrar"
+brew "yadm"
+
+# misc cask
+cask "caffeine"
+cask "evernote"
+cask "google-chrome"
+cask "spotify"
+cask "tunnelblick"
+cask "visual-studio-code"
