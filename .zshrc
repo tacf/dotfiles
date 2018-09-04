@@ -9,6 +9,7 @@ is_osx () {
 }
 
 ZSH_THEME="tiagoacf"
+plugins=(battery)
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
