@@ -4,7 +4,11 @@
 
 [user]
 	name = Tiago Ferreira
-	email = dev.tiago@gmail.com
+  
+[includeIf "gitdir:~/work/"]
+    path = .gitconfig-work
+[includeIf "gitdir:~/personal/"]
+    path = .gitconfig-personal
 
 [core]
   autocrlf = false
