@@ -3,7 +3,8 @@
   ui = auto
 
 [user]
-	name = Tiago Ferreira
+	name = tacf
+	email = dev.tiago@gmail.com
   
 [includeIf "gitdir:~/work/"]
     path = .gitconfig-work
