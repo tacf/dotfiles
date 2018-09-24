@@ -46,3 +46,7 @@ export NVM_DIR=$HOME/.nvm
 if is_osx; then 
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 fi
+
+if is_linux; then
+	export PATH=$PATH:$HOME/.git-radar
+fi
