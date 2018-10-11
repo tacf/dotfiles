@@ -50,3 +50,5 @@ fi
 if is_linux; then
 	export PATH=$PATH:$HOME/.git-radar
 fi
+
+alias shrug='echo "¯\_(ツ)_/¯"'
