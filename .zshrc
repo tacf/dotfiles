@@ -49,6 +49,9 @@ fi
 
 if is_linux; then
 	export PATH=$PATH:$HOME/.git-radar
+    export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin/
 fi
 
 alias shrug='echo "¯\_(ツ)_/¯"'
+#alias cat='bat'
+alias tr2='tree -L 2'
