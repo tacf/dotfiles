@@ -18,8 +18,14 @@ cask "iterm2"
 cask "vagrant"
 cask "virtualbox"
 
+# auth
+brew "yubikey-personalization"
+brew "hopenpgp-tools" 
+brew "ykman"
+brew "pinentry-mac"
+
 # git prompt
-brew "git-radar"
+brew "michaeldfallen/formula/git-radar"
 
 # misc
 brew "unrar"
@@ -32,3 +38,4 @@ cask "google-chrome"
 cask "spotify"
 cask "tunnelblick"
 cask "visual-studio-code"
+cask "spectacle"
