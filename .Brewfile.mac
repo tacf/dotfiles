@@ -8,6 +8,7 @@ brew "ssh-copy-id"
 brew "tree"
 brew "vim"
 brew "gnupg"
+brew "bat"
 
 # dev
 brew "go"
