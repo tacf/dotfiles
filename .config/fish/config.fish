@@ -13,9 +13,21 @@ end
 
 # ALIAS
 alias cat=bat
+alias dck "docker"
 
+# ALIAS AWS
+alias ec2-ls "aws ec2 describe-instances --query \"Reservations[*].Instances[*].{Name:Tags[?Key==`Name`].Value[] | [0], PublicIP:PublicIpAddress, Status:State.Name}\""
+
+# Path
+set PATH $PATH $HOME/bin
 
 # AUTH Tooling
 export GPG_TTY=(tty)
 export SSH_AUTH_SOCK=(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
+
+# Pyenv related
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+status --is-interactive; and source (pyenv init -|psub)
+
+

@@ -21,11 +21,12 @@ cask "iterm2"
 cask "vagrant"
 cask "virtualbox"
 
-# auth
+# auth & security
 brew "yubikey-personalization"
 brew "hopenpgp-tools" 
 brew "ykman"
 brew "pinentry-mac"
+cask "veracrypt"
 
 # git prompt
 brew "michaeldfallen/formula/git-radar"

@@ -5,6 +5,7 @@
 [user]
 	name = tacf
 	email = dev.tiago@gmail.com
+	signingkey = 0xE3AAD82D9AE22334
   
 [includeIf "gitdir:~/work/"]
     path = .gitconfig-work
@@ -25,6 +26,7 @@
 [commit]
   # Show diff when preparing commit message
   verbose = true
+	gpgsign = true
 
 [alias]
   a = add
@@ -63,4 +65,4 @@
 	process = git-lfs filter-process
 	required = true
 [gpg]
-	program = gpg2
+	program = /usr/local/bin/gpg
