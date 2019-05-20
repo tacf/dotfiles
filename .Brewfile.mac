@@ -3,12 +3,15 @@ brew "bash"
 brew "bash-completion"
 brew "coreutils"
 brew "git"
-brew "openssl"
-brew "ssh-copy-id"
 brew "tree"
 brew "vim"
 brew "gnupg"
 brew "bat"
+
+# Network
+brew "ssh-copy-id"
+brew "openssl"
+brew "httpie"
 
 # dev
 brew "go"
@@ -28,8 +31,9 @@ brew "ykman"
 brew "pinentry-mac"
 cask "veracrypt"
 
-# git prompt
+# git tools
 brew "michaeldfallen/formula/git-radar"
+brew "diff-so-fancy"
 
 # misc
 brew "unrar"
@@ -45,3 +49,4 @@ cask "visual-studio-code"
 cask "spectacle"
 tap "caskroom/fonts"
 cask "font-fira-code"
+cask "karabiner-elements"
