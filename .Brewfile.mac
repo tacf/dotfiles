@@ -12,17 +12,20 @@ brew "bat"
 brew "ssh-copy-id"
 brew "openssl"
 brew "httpie"
+brew "wget"
+
+#shell
+brew "romkatv/powerlevel10k/powerlevel10k"
 
 # dev
 brew "go"
 brew "jq"
 brew "vagrant-completion"
-brew "terraform"
 brew "kubernetes-cli"
 cask "docker"
 cask "iterm2"
 cask "vagrant"
-cask "virtualbox"
+brew "warrensbox/tap/tfswitch"
 
 # auth & security
 brew "yubikey-personalization"
@@ -30,23 +33,19 @@ brew "hopenpgp-tools"
 brew "ykman"
 brew "pinentry-mac"
 cask "veracrypt"
+cask "bitwarden"
 
 # git tools
 brew "michaeldfallen/formula/git-radar"
 brew "diff-so-fancy"
 
 # misc
-brew "unrar"
 brew "yadm"
 
 # misc cask
 cask "caffeine"
 cask "evernote"
-cask "google-chrome"
 cask "spotify"
-cask "tunnelblick"
 cask "visual-studio-code"
-cask "spectacle"
-tap "caskroom/fonts"
-cask "font-fira-code"
-cask "karabiner-elements"
+cask "rectangle"
+tap "homebrew/cask-fonts"

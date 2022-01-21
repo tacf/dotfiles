@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export ZSH=$HOME/.oh-my-zsh
 
 is_linux () {
@@ -8,7 +15,7 @@ is_osx () {
   [[ $('uname') == 'Darwin' ]]
 }
 
-ZSH_THEME="tiagoacf"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(battery)
 
 ENABLE_CORRECTION="true"
@@ -34,24 +41,30 @@ else
   export EDITOR='vim'
 fi
 
-# gpg
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
 # nvm
 export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if is_osx; then 
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+  export PATH=/opt/homebrew/bin:$PATH
 fi
 
 if is_linux; then
-	export PATH=$PATH:$HOME/.git-radar
+    export PATH=$PATH:$HOME/.git-radar
     export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin/
 fi
+
+# gpg
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
 
 alias shrug='echo "¯\_(ツ)_/¯"'
 #alias cat='bat'
 alias tr2='tree -L 2'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[[ ! -f ~/.zshrc_work ]] || source ~/.zshrc_work
