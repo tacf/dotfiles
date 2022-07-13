@@ -22,6 +22,7 @@
 
 [push]
   default = simple
+  autoSetupRemote = true
 
 [commit]
   # Show diff when preparing commit message
