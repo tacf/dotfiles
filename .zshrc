@@ -51,7 +51,7 @@ if is_osx; then
 fi
 
 if is_osx; then
-  source /opt/homebrew/opt/fzf/shell/key-bindings.zshrc
+  source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
   source /opt/homebrew/opt/fzf/shell/completion.zsh
 fi
 
