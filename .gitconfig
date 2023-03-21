@@ -67,3 +67,5 @@
 	required = true
 [gpg]
 	program = /opt/homebrew/bin/gpg
+[hub]
+	protocol = https

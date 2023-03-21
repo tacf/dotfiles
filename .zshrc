@@ -50,6 +50,11 @@ if is_osx; then
   export PATH=/opt/homebrew/bin:$PATH
 fi
 
+if is_osx; then
+  source /opt/homebrew/opt/fzf/shell/key-bindings.zshrc
+  source /opt/homebrew/opt/fzf/shell/completion.zsh
+fi
+
 if is_linux; then
     export PATH=$PATH:$HOME/.git-radar
     export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin/
@@ -64,7 +69,15 @@ alias shrug='echo "¯\_(ツ)_/¯"'
 #alias cat='bat'
 alias tr2='tree -L 2'
 
+#kubernetes alias
+alias k='kubectl'
+alias kgp='kubectl get pods'
+alias kd='kubectl describe'	
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [[ ! -f ~/.zshrc_work ]] || source ~/.zshrc_work
+
+
+export PATH=$PATH:~/bin:~/code/scripts

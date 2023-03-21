@@ -1,4 +1,4 @@
-# up-to-date unix
+# shell utilities
 brew "bash"
 brew "bash-completion"
 brew "coreutils"
@@ -7,6 +7,7 @@ brew "tree"
 brew "vim"
 brew "gnupg"
 brew "bat"
+brew "bash-completion"
 
 # Network
 brew "ssh-copy-id"
@@ -14,7 +15,7 @@ brew "openssl"
 brew "httpie"
 brew "wget"
 
-#shell
+#shell candy
 brew "romkatv/powerlevel10k/powerlevel10k"
 
 # dev
@@ -26,6 +27,9 @@ cask "docker"
 cask "iterm2"
 cask "vagrant"
 brew "warrensbox/tap/tfswitch"
+
+#kubernetes
+brew "kubectx"
 
 # auth & security
 brew "yubikey-personalization"
@@ -41,6 +45,7 @@ brew "diff-so-fancy"
 
 # misc
 brew "yadm"
+brew "fzf"
 
 # misc cask
 cask "caffeine"
